@@ -1,0 +1,26 @@
+%h1= Member.model_name.human(count: 2)
+.table-responsive
+  %table.table.table-hover.align-middle
+    %thead
+      %tr
+        %th= Member.human_attribute_name :id
+        %th= Member.human_attribute_name :first_name
+        %th= Member.human_attribute_name :last_name
+        %th= Member.human_attribute_name :email
+        %th= Member.human_attribute_name :date_of_birth
+        %th= Member.human_attribute_name :occupation
+        %th
+    %tbody
+      - @members.each do |member|
+        %tr
+          %th= member.id
+          %td= member.first_name
+          %td= member.last_name
+          %td= mail_to member.email
+          %td= l(member.date_of_birth)
+          %td= member.occupation
+          %td.text-end
+            = link_to 'show', member_path(member), class: 'btn btn-sm btn-primary'
+            = link_to 'edit', edit_member_path(member), class: 'btn btn-sm btn-secondary'
+
+= link_to 'new', new_member_path, class: 'rounded-circle bg-success text-white position-fixed bottom-0 end-0 me-3 mb-3'
