@@ -1,0 +1,11 @@
+%h1= @member.to_s
+
+.row
+  %dt.col-sm-3= Member.human_attribute_name :email
+  %dd.col-sm-9= mail_to @member.email
+
+  %dt.col-sm-3= Member.human_attribute_name :date_of_birth
+  %dd.col-sm-9= l(@member.date_of_birth)
+
+  %dt.col-sm-3= Member.human_attribute_name :occupation
+  %dd.col-sm-9= @member.occupation

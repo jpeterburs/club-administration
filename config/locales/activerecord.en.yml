@@ -1,0 +1,15 @@
+en:
+  activerecord:
+    models:
+      member:
+        one: Member
+        other: Members
+
+    attributes:
+      member:
+        id: #
+        first_name: First name
+        last_name: Last name
+        email: E-Mail
+        date_of_birth: Date of birth
+        occupation: Occupation

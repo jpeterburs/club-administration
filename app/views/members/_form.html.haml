@@ -1,0 +1,23 @@
+= form_for @member do |f|
+
+  = f.label :first_name , class: 'form-label'
+  .mb-3
+    = f.text_field :first_name , class: 'form-control'
+
+  = f.label :last_name , class: 'form-label'
+  .mb-3
+    = f.text_field :last_name , class: 'form-control'
+
+  = f.label :email , class: 'form-label'
+  .mb-3
+    = f.text_field :email , class: 'form-control'
+
+  = f.label :date_of_birth , class: 'form-label'
+  .mb-3
+    = f.text_field :date_of_birth, type: :date, class: 'form-control'
+
+  = f.label :occupation , class: 'form-label'
+  .mb-3
+    = f.text_field :occupation , class: 'form-control'
+
+  = f.submit class: 'btn btn-primary'
