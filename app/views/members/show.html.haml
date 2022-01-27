@@ -1,5 +1,12 @@
 %h1= @member.to_s
 
+%nav
+  %ol.breadcrumb
+    %li.breadcrumb-item
+      = link_to Member.model_name.human(count: 2), members_path
+    %li.breadcrumb-item.active
+      = @member.to_s
+
 .row
   %dt.col-sm-3= Member.human_attribute_name :email
   %dd.col-sm-9= mail_to @member.email
