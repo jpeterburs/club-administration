@@ -2,3 +2,5 @@
 //= require popper
 //= require bootstrap
 import "@hotwired/turbo-rails"
+
+import "./components/hello_react"
