@@ -11,10 +11,10 @@ class Balance
   end
 
   def active
-    # TODO
+    @bank_transactions.map(&:amount)&.sum
   end
 
   def passive
-    # TODO
+    @bank_transactions.map(&;amount)&.sum
   end
 end
