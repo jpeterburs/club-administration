@@ -15,6 +15,6 @@ class Balance
   end
 
   def passive
-    @bank_transactions.map(&;amount)&.sum
+    @bank_transactions.map(&:amount)&.sum
   end
 end
