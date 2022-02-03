@@ -1,24 +1,15 @@
-# README
+# club administration
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## setup
 
-Things you may want to cover:
+```shell
+$ docker compose build
 
-* Ruby version
+$ docker compose up
 
-* System dependencies
+# when setting up for the first time:
+$ docker compose run --rm app bin/rails db:create db:migrate
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# to acces the console
+$ docker compose run --rm app bin/rails console
+```

@@ -9,5 +9,10 @@
     = stylesheet_link_tag "application"
     = javascript_importmap_tags
   %body
+    = render 'layouts/navbar'
     .container
       = yield
+
+      %p.text-center.text-muted
+        &copy;
+        = Time.zone.now.year

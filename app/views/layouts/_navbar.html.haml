@@ -1,0 +1,17 @@
+%nav.navbar.navbar-sticky-top.navbar-expand-sm.navbar-dark.bg-dark
+  .container
+    = link_to root_url, class: 'navbar-brand' do
+      = 'VereinsVerwaltung'
+      &trade;
+    %button.navbar-toggler{ data: { 'bs-toggle': 'collapse', 'bs-target': '#navbar-items' } }
+      .navbar-toggler-icon
+
+    #navbar-items.collapse.navbar-collapse
+      %ul.navbar-nav.me-auto
+        %li.nav-item.dropdown
+          = link_to Member.model_name.human(count: 2), '#', id: 'members-dropdown', class: 'nav-link dropdown-toggle', data: { 'bs-toggle': 'dropdown' }
+          %ul.dropdown-menu
+            %li= link_to t('.overview'), members_path, class: 'dropdown-item'
+            %li= link_to t('.create_new'), new_member_path, class: 'dropdown-item'
+        %li.nav-item
+          = link_to t('.balance'), new_balance_path, class: 'nav-link'
