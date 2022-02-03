@@ -1,4 +1,10 @@
 %h1= Member.model_name.human(count: 2)
+
+%nav
+  %ol.breadcrumb
+    %li.breadcrumb-item.active
+      = Member.model_name.human(count: 2)
+
 .table-responsive
   %table.table.table-hover.align-middle
     %thead
@@ -20,7 +26,12 @@
           %td= l(member.date_of_birth)
           %td= member.occupation
           %td.text-end
-            = link_to 'show', member_path(member), class: 'btn btn-sm btn-primary'
-            = link_to 'edit', edit_member_path(member), class: 'btn btn-sm btn-secondary'
+            = link_to member_path(member), class: 'me-2 btn btn-sm btn-primary' do
+              = bootstrap_icon 'eye'
+            = link_to edit_member_path(member), class: 'me-2 btn btn-sm btn-secondary' do
+              = bootstrap_icon 'pencil'
+            = link_to member_path(member), class: 'me-2 btn btn-sm btn-danger', data: { turbo_method: :delete, turbo_confirm: t('are_you_sure') } do
+              = bootstrap_icon 'trash'
 
-= link_to 'new', new_member_path, class: 'rounded-circle bg-success text-white position-fixed bottom-0 end-0 me-3 mb-3'
+= link_to new_member_path, class: 'rounded-circle bg-success text-white position-fixed bottom-0 end-0 me-3 mb-3' do
+  = bootstrap_icon 'plus', width: 64
