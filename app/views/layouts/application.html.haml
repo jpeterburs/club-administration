@@ -12,4 +12,8 @@
     = render 'layouts/navbar'
     .container
       #app
-      = yield
+        = yield
+
+      %p.text-center.text-muted
+        &copy;
+        = Time.zone.now.year
