@@ -10,3 +10,5 @@
           %ul.dropdown-menu
             %li= link_to t('.overview'), members_path, class: 'dropdown-item'
             %li= link_to t('.create_new'), new_member_path, class: 'dropdown-item'
+        %li.nav-item
+          = link_to t('.balance'), new_balance_path, class: 'nav-link'
