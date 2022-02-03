@@ -1,0 +1,7 @@
+production:
+  adapter: postgresql
+  encoding: unicode
+  host: db
+  username: postgres
+  password: postgres
+  database: club_administration
