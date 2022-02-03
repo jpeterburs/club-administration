@@ -3,4 +3,4 @@
 //= require bootstrap
 import "@hotwired/turbo-rails"
 
-import "./components/hello_react"
+// import "./components/react_component"
