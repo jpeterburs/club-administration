@@ -1,5 +1,5 @@
 .container.flex-column
-  %form.row{:action => "/balances", :method => "get"}
+  %form.row{:action => "/balances/show", :method => "get"}
     .from-group.col-6
       %label.form-label Startdatum:
       %input#date_from.form-control{:name => "date_from", :type => "date"}/
@@ -11,4 +11,4 @@
   .ms-auto.row.form-group
     %label
       Kontostand:
-    %a.btn.btn-info.form-control{:href => "/balances/annual_balance"} Jahresabschluss erstellen
+    %a.btn.btn-info.form-control{:href => "/balances/new"} Jahresabschluss erstellen
