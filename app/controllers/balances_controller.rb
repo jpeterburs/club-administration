@@ -7,8 +7,6 @@ class BalancesController < ApplicationController
   end
   end
   
-  def annual_balance
-    @passiva = Balance.passive()
-    @activa =Balance.active()
+  def new
   end
 end
