@@ -1,16 +1,12 @@
 class BalancesController < ApplicationController
-  def def index
-    if params[:date_from].blank? and params[:data_to].blank?
-      @transactions = BankTransaction.all
-    elsif !params[:data_from].blank? and !params[:data_to].blank?
-      @transactions = BankTransaction.get_transactions_for_time_period(params[:data_from], params[:data_to])
-    else
-      render :nothing => true, :status => :bad_request 
-    end
+  def show
+    return render(:new) unless params[:start_date] && params[:end_date]
+    
+    @transactions = BankTransaction.for_time_period(params[:start_date], params[:end_date])
+    @balance = Balance.new(@transactions, nil) # TODO add bank account
+  end
   end
   
-  def annual_balance
-    @passiva = Balance.passive()
-    @activa =Balance.active()
+  def new
   end
 end
