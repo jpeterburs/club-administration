@@ -8,7 +8,7 @@
 90.times do
   BankTransaction.create(
     transaction_type: 'SEPA',
-    amount: [1..99].sample,
+    amount: (1..99).to_a.sample,
     purpose: 'Eintrittsgebüren',
     transaction_time: Time.at(rand * Time.now.to_f)
   )
