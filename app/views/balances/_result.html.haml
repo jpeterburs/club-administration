@@ -1,0 +1,20 @@
+%hr
+
+%table.table
+  %thead
+    %tr
+      %th.text-start Activa
+      %th{ colspan: 2 }
+      %th.text-end Passiva
+  %tbody
+    %tr
+      %td.text-start Bankguthaben:
+      %td.text-end= @balance.active
+      %td.text-start Eigenkapital:
+      %td.text-end= @balance.passive
+  %tfoot
+    %tr
+      %td
+      %td.text-end= @balance.active
+      %td
+      %td.text-end= @balance.passive
