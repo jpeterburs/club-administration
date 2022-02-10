@@ -5,11 +5,21 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-90.times do
+[
+  Date.new(2021, 12, 13),
+  Date.new(2021, 12, 23),
+  Date.new(2021, 12, 30),
+
+  Date.new(2022, 01, 01),
+  Date.new(2022, 01, 01),
+  Date.new(2022, 01, 01),
+  Date.new(2022, 01, 02),
+  Date.new(2022, 01, 05)
+].each do |date|
   BankTransaction.create(
     transaction_type: 'SEPA',
-    amount: (1..99).to_a.sample,
+    amount: (1..500).to_a.sample,
     purpose: 'Eintrittsgebüren',
-    transaction_time: Time.at(rand * Time.now.to_f)
+    transaction_time: date
   )
 end

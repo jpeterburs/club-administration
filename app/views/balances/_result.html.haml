@@ -9,12 +9,12 @@
   %tbody
     %tr
       %td.text-start Bankguthaben:
-      %td.text-end= @balance.active
+      %td.text-end= number_to_currency(@balance.active)
       %td.text-start Eigenkapital:
-      %td.text-end= @balance.passive
+      %td.text-end= number_to_currency(@balance.passive)
   %tfoot
     %tr
       %td
-      %td.text-end= @balance.active
+      %td.text-end= number_to_currency(@balance.active)
       %td
-      %td.text-end= @balance.passive
+      %td.text-end= number_to_currency(@balance.passive)

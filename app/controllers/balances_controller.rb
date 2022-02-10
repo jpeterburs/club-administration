@@ -4,7 +4,7 @@ class BalancesController < ApplicationController
 
   def result
     @transactions = if params[:balance][:start_date].present? && params[:balance][:end_date].present?
-                      BankTransaction.for_time_period(params[:start_date], params[:end_date])
+                      BankTransaction.for_time_period(params[:balance][:start_date], params[:balance][:end_date])
                     else
                       BankTransaction.all
                     end
