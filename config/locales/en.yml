@@ -7,5 +7,5 @@ en:
   back: 'Back'
 
   balances:
-    new:
+    index:
       generate_balance: 'Generate Balance'
