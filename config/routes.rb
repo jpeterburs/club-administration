@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   root 'members#index'
   resources :members
-  resources :balances, only: %i[new show]
+  get 'balances/new', to: 'balances#new'
+  post 'balances/result', to: 'balances#result'
 end
