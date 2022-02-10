@@ -1,14 +1,13 @@
-.container.flex-column
-  %form.row{:action => "/balances/show", :method => "get"}
-    .from-group.col-6
-      %label.form-label Startdatum:
-      %input#date_from.form-control{:name => "date_from", :type => "date"}/
-    .form-group.col-6
-      %label.form-label Enddatum:
-      %input#date_to.form-control{:name => "date_to", :type => "date"}/
-    .form-group
-      %input.form-control.btn.btn-success.mt-3{:type => "button", :value => "OK"}/
-  .ms-auto.row.form-group
-    %label
-      Kontostand:
-    %a.btn.btn-info.form-control{:href => "/balances/new"} Jahresabschluss erstellen
+%table.table.table-bordered.vh-100
+  %thead
+    %tr
+      %th Activa
+      %th Passiva
+  %tbody
+    %tr
+      %td Bankguthaben: = activa
+      %td Eigenkapital: = passiva
+  %tfoot
+    %tr
+      %td Summe: = activa
+      %td Summe: = passiva

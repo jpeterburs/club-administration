@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   root 'members#index'
   resources :members
-  resources :balances, only: %i[index annual_balance]
+  resources :balances, only: %i[new show]
 end
