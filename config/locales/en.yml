@@ -5,3 +5,7 @@ en:
   update: 'Edit %{model}'
   breadcrumb_edit: 'edit'
   back: 'Back'
+
+  balances:
+    new:
+      generate_balance: 'Generate Balance'

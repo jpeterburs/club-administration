@@ -5,5 +5,9 @@ Rails.application.routes.draw do
   # root "articles#index"
   root 'members#index'
   resources :members
-  resources :balances, only: %i[new show]
+  resources :balances, only: :index do
+    collection do
+      post :generate
+    end
+  end
 end
