@@ -1,8 +1,8 @@
 class BalancesController < ApplicationController
-  def new
+  def index
   end
 
-  def result
+  def generate
     @transactions = if params[:balance][:start_date].present? && params[:balance][:end_date].present?
                       BankTransaction.for_time_period(params[:balance][:start_date], params[:balance][:end_date])
                     else
