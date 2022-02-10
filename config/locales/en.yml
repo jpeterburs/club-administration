@@ -1,11 +1,11 @@
 en:
-  are_you_sure: "Are you sure?"
-  create: "Create %{model}"
-  breadcrumb_new: "new"
-  update: "Edit %{model}"
-  breadcrumb_edit: "edit"
-  back: "Back"
+  are_you_sure: 'Are you sure?'
+  create: 'Create %{model}'
+  breadcrumb_new: 'new'
+  update: 'Edit %{model}'
+  breadcrumb_edit: 'edit'
+  back: 'Back'
 
   balances:
     index:
-      generate_balance: "Generate Balance"
+      generate_balance: 'Generate Balance'
