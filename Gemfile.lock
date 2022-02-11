@@ -136,7 +136,7 @@ GEM
       racc (~> 1.4)
     pg (1.2.3)
     popper_js (2.9.3)
-    puma (5.5.2)
+    puma (5.6.2)
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.3)
@@ -211,7 +211,7 @@ DEPENDENCIES
   haml-rails
   importmap-rails
   pg (~> 1.1)
-  puma (~> 5.0)
+  puma (~> 5.6)
   rails (~> 7.0.1)
   sprockets-rails
   turbo-rails (~> 1.0.0)
